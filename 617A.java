@@ -1,0 +1,50 @@
+/*
+A. Elephant
+time limit per test1 second
+memory limit per test256 megabytes
+An elephant decided to visit his friend. It turned out that the elephant's house is located at point 0 and his friend's house is located at point x(x > 0) of the coordinate line. In one step the elephant can move 1, 2, 3, 4 or 5 positions forward. Determine, what is the minimum number of steps he need to make in order to get to his friend's house.
+
+Input
+The first line of the input contains an integer x (1 ≤ x ≤ 1 000 000) — The coordinate of the friend's house.
+
+Output
+Print the minimum number of steps that elephant needs to make to get from point 0 to point x.
+
+Examples
+InputCopy
+5
+OutputCopy
+1
+InputCopy
+12
+OutputCopy
+3
+Note
+In the first sample the elephant needs to make one step of length 5 to reach the point x.
+
+In the second sample the elephant can get to point x if he moves by 3, 5 and 4. There are other ways to get the optimal answer but the elephant cannot reach x in less than three moves.
+*/
+
+
+/*
+Solution:
+
+The best solution is to choose the largest step that the elephant can take: i;e 5. 
+So if we have 12 steps, we can take 2 5 steps and then 1 2 step. which mean: 12/5 + 1 steps. 
+*/
+
+import java.util.*;
+
+public class Main {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+
+        int steps = sc.nextInt();
+        if(steps%5>0){
+            System.out.println((steps/5)+1);
+        }
+        else{
+            System.out.println((steps/5));
+        }
+    }
+}
