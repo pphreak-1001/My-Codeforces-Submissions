@@ -41,7 +41,7 @@ public class Main {
         for(int i=1;i<=n;i++){
             int r1 = sc.nextInt();
             int r2 = sc.nextInt();
-            if(r2-r1>0){
+            if(r2-r1>=2){
                 c++;
             }
         }
